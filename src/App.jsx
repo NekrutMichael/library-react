@@ -1,16 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import './index.css';
+import HomePage from './pages/HomePage';
+import CatalogPage from './pages/CatalogPage';
+import BookDetails from './pages/BookDetails';
 
-function App() {
+export default function App() {
   return (
-    <div className="app-container">
+    <BrowserRouter>
       <Header />
-      <Main />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/book/:id" element={<BookDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
