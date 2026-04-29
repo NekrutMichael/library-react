@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import CatalogPage from './pages/CatalogPage';
 import BookDetails from './pages/BookDetails';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/contacts" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );
